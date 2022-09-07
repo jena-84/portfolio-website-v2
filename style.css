@@ -1,0 +1,651 @@
+/* Reset and common file*/
+*{
+    margin:0;
+    padding:0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+}
+html{
+    font-size: 62%;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x:hidden;
+}
+
+.heading{
+    font-size: 4rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 15rem;
+    border-bottom: 0.3rem solid #333;
+    text-shadow: 0.2rem 0.2rem 0.5rem #555;
+  
+}
+/*ENd of common style*/
+
+/*Section-1*/
+.section-1{
+    width:100%;
+    height:86vh;
+    background:#eef;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;  
+    position: relative; 
+    overflow: hidden;
+    
+
+}
+  #wraper-heading{
+     position: relative;
+     width: 900px;
+     height: 30px;
+     top: 3rem;
+     left: 130px;
+  }
+ .section-1-heading{
+    position:absolute;
+    z-index: 10;
+    top: -5rem;
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: rgb(87, 83, 83);
+    padding: 0 15rem;
+    letter-spacing:0.3rem;
+    text-align: center;
+    margin: 0;
+ } 
+ 
+ .section-1-heading::after{
+     content: "";
+     border-left: .12em solid rgb(87, 83, 83);;
+     animation: blink 0.9s ease infinite ;
+     margin-left: 3px;
+ }
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.person-img{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.7rem dotted #9a9190;
+    background-color: rgba(255,255,255,0.7);
+    padding: 0.5rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 20;
+    margin-top: 3rem;
+   
+}
+
+.flouting{
+ width: 150vw;
+ height: 125vw;
+ position:absolute;
+ background-color:#cfbcba;						 
+ top:-100vw;
+ left:calc(50% - 75vw);
+ border-radius: 45%;
+ animation:rotate 40s infinite;
+}
+.flouting::before{
+    content:" ";
+    width: 100%;
+    height: 100%;
+    background-color:rgba(228,28,111,0.1);
+    position: absolute;
+    top:0;
+    left:0;
+    border-radius: 40%;
+    animation:rotate 40s infinite;
+}
+@keyframes rotate{
+    0%{
+      transition:rotate(0);
+    }
+    100%{
+      transform:rotate(360deg);
+    }
+}
+
+
+/*end of Section-1/*
+
+/*Navbar*/
+.navbar{
+ width: 100%;
+ height: 4rem;
+ background-color: #cfbcba;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ box-shadow: 0.2rem 0.2rem 0.5rem #cfbcba;
+ /* to make contents of other sections behind navbar*/
+ position: absolute;
+ z-index: 300;
+}
+.sticky{
+    top: 0;
+    position: fixed;
+}
+
+.navbar-link{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 3rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.change.navbar-link{
+    color: #fff;
+}
+
+
+.navbar-link:hover{
+    color: #fff;
+}
+
+.navbar-link::before{
+    content: "";
+    width:0;
+    height:0.2rem;
+    background-color: #fff;
+    position:absolute;
+    right:-15%;
+    bottom:-0.3rem;
+    transition:width 0.2s;
+}
+
+.change.navbar-link::before{
+    width:130% ;
+}
+
+.navbar-link:hover::before{
+    width:130%;
+}
+/*End of Navbar*/
+
+/*Section-2*/
+.section-2{
+ width: 100%;
+ height: 100%;
+ padding: 0.1rem 0 10rem 0;
+ background-color: #fff;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ 
+}
+.section-2-heading{
+  margin-top: 6rem;
+}
+.paragraph-on-me{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 8rem;
+    letter-spacing: 0.1rem;
+    /*font-family:  'Architects Daughter', cursive;*/
+    border:1px solid white;
+    border-radius: 10px;
+    padding: 5rem;
+    margin-top:-4rem;
+    width: 80%;
+    margin-left: 14rem;
+    box-shadow: 10px 10px 10px 2px #888888;
+}
+.skills{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+
+}
+.progress-percent{
+    width: 0;
+    height: 100%;
+    background-color: #e41c6f;
+    border-radius: 0.3rem;
+    transition: width 0.5s 0.5s ease-in-out;
+}
+.services{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    
+    justify-content: space-evenly;
+    align-items: center;
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+
+}
+  @-webkit-keyframes mover {
+    0% {transform: translateY(0); }
+    100% {transform:translateY(-10px)}
+}
+ .service{
+     text-align: center;
+ }
+  .service:first-child,
+  .service:last-child{
+      align-self: flex-start;
+  }
+ .service i{
+    font-size: 5rem;
+    color: #888;
+    margin-bottom: 3rem;
+    text-shadow: 0.1rem 0.1rem 0.5rem #555;
+ }
+ .service h2{
+     font-size: 2rem;
+     color: #fff;
+     background-color: #777;
+     width: 20rem;
+     letter-spacing: 0.3rem;
+     transform: skew(-10deg);
+     box-shadow: 0.2rem 0.2rem 0.5rem #555;
+ }
+/*Section -3*/
+.section-3{
+    width: 100%;
+    height: 100%;
+    padding: 10rem 0;
+    background-color: #eef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.projects-wrapper{
+    width: 82%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;    
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin: 1rem;
+    top: -4rem;
+    background: #fff;
+    box-shadow: 0.3rem 0.3rem 0.5rem #777;
+    position: relative;
+    /*To the content of the project*/
+    overflow: hidden;
+    transition: box-shadow 0.5s;
+
+}
+.project:hover{
+    box-shadow: 1rem 1rem 1rem #777;
+}
+
+.project-text{
+    text-align: center;
+    letter-spacing: 0.1rem;
+    position:absolute;
+    top:-10rem;
+    transition: top 0.3s;
+    /*to make project name be selected */
+    z-index: 10;
+}
+.project:hover .project-text{
+    top: 5rem;
+    transition: top 0.3s 0.3s;
+}
+.project-name{
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+}
+.project-technologies{
+ font-size: 1.8rem;
+ color: #867d7c;
+}
+.project-img{
+ width: 40rem;
+ transition: opacity 0.3s;
+}
+.project:hover .project-img{
+    opacity: 0.2;
+}
+
+
+.project-link{
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 0.1rem;
+  border:0.3rem solid #cfbcba;
+  padding: 0 1rem;
+  background-color: #fff;
+  position: absolute;
+  bottom: -5rem;
+  transition: bottom 0.3rem;
+}
+.project:hover .project-link{
+    bottom: 5rem;
+    transition:bottom 0.3s 0.3s;
+}
+/*End of Section-3*/
+
+/* Section quete wrapper */
+.quete-wrapper{
+    height: 20vh;
+    width: 100%;
+    align-items: center;
+    background-color: #cfbcba;
+    margin: 0;
+}
+
+.quete-wrapper .quete{
+    font-size:2.4rem;
+    text-align:center;
+    padding:2rem;
+    
+    /*font-family:'Shadows Into Light', cursive;*/
+    margin: 0;
+
+}
+/*End of section quete wrapper*/
+/*Section-4*/
+.section-4{
+    width: 100%;
+    height: 90vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+
+}
+.section-4-heading{
+    color: #fff;
+    box-shadow: none;
+    border-color: #fff;
+    margin-top:-18rem;
+}
+.contact-form{
+    width: 40rem;
+    flex-direction:column;
+    position: absolute;
+    margin-top: 12rem;
+    height: 25rem;
+    
+}
+
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background-color: #eef;
+    font-size: 1.5rem;
+    border:0.2rem solid #cfbcba;
+    border-radius: 0.5rem;
+}
+
+.contact-form textarea{
+    height: 9rem;
+    max-height: 15rem;
+    max-width: 100%;
+    resize: none;
+}
+.contact-form .contact-form-btn{
+    background-color: #cfbcba;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    width: 20rem;
+    padding:0.5rem;
+    /*margin-left: 10rem;*/
+}
+
+.message{
+    font-size: 1.2rem;
+    color: #cfbcba;
+    font-size: 600;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin: 0 auto 1rem 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.message.error{
+    visibility: visible;
+    opacity: 1;
+}
+/* end of Section4*/
+
+/*Section-5*/
+.section-5{
+    width: 100%;
+    height: 25vh;
+    background-color: #222;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+
+}
+.social-media{
+    margin-bottom: 3rem;
+    padding: 0;
+
+}
+.social-media-link{
+    margin:0 2rem;
+    padding:0.6rem;
+    background-color: #977f7c;
+    border-radius:0.5rem;
+    display: inline-block;
+}
+.social-media-link i {
+    font-size: 3rem;
+    color: #fff;
+}
+.copyright{
+    color: #aaa;
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 2rem;
+
+}
+/*End of Section-5*/
+
+/*Responsive*/
+@media(max-width:1200px){
+  .paragraph-on-me{
+    font-size: 2rem;
+    margin-top:-5rem;
+    padding: 1rem;
+     }
+.services{
+  height: auto;
+  flex-wrap: wrap;  
+ }
+.service{
+  margin: 3rem 2rem;
+ }
+.section-4{
+  height: 105vh;
+ }
+ 
+ .section-4-heading{
+     margin-top:-15rem; 
+ }
+.contact-form{
+    width: 30rem;
+    height: 27rem;
+    margin:20rem 0 15rem 0;
+}
+.quete-wrapper{
+  height: 19vh;
+}
+.quete-wrapper .quete{
+    font-size:2rem;
+    margin:0;
+}
+.social-media{
+    margin-bottom:2rem;
+    padding: 0;
+}
+.copyright{
+    font-size: 1.5rem;
+    padding-bottom: 0rem;
+}
+}
+
+@media(max-width:800px){
+.section-1-heading{
+     font-size: 2.3rem;
+ }
+.paragraph-on-me{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 8rem;
+    padding: 1rem;
+    margin-top:-3rem;
+    width: 80%;
+    margin-left: 9rem;
+  }
+  .quete-wrapper{
+    height: 18vh;
+
+  }
+  .quete-wrapper .quete{
+      font-size:1.5rem;
+      margin-top:0;
+  }
+  .contact-form{
+    margin-top: 16rem;
+    margin-bottom: 15rem; 
+    width: 30rem;
+    height: 23rem;
+}
+
+  .section-4{
+    height: 106vh;
+}
+}
+@media(max-width:600px){
+ .section-1-heading{
+    font-size:2rem;
+ } 
+ .person-img{
+    width: 23rem;
+    height: 23rem; 
+  }
+.navbar-link{
+    margin: 0 2rem;
+    font-size: 1.5rem;
+  } 
+.section-2{
+      padding: 1rem;
+  }
+.section-2-heading{
+  margin-bottom: 10rem;
+}
+.paragraph-on-me{
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 1rem;
+    margin-top:-7rem;
+    margin-left: 6rem;
+  }
+.progress-bar{
+  width: 45rem;  
+}
+.project-img{
+    width: 100%;
+}
+.section-4{
+    height: 110vh;
+}
+.section-4-heading{
+    margin-top:-13rem;
+    font-size: 3.5rem;
+}
+.contact-form{
+    width: 27rem;
+    height:16rem;
+    margin-top:15rem;
+    margin-bottom:20rem;
+}
+
+  .quete-wrapper{
+    height: 18vh;
+  }
+  .quete-wrapper .quete{
+      font-size:1.3rem;
+      margin-top:0;
+  } 
+.copyright{
+    width: 70%;
+ }
+}
+
+@media(max-width:500px){
+    html{
+        font-size: 55%;
+    }
+    .quete-wrapper .quete{
+        font-size:1.6rem;
+    }
+}
+
+@media(max-width:450px){
+  html{
+     font-size: 42%;
+  }
+  .section-1-heading{
+    font-size: 2.3rem;
+    padding: 0 25rem;
+ }
+ .paragraph-on-me{
+    margin-left: 4rem;
+    font-size: 2rem;
+  }
+  .section-4{
+    height: 100vh;
+}
+ /*
+ .person-img{
+    width: 24rem;
+    height: 24rem; 
+  }
+  .navbar-link{
+    font-size: 1.3rem;
+}
+
+.quete-wrapper .quete{
+    font-size:1.8rem;
+    font-family:  'Architects Daughter', cursive;
+}*/
+  
+}
+
