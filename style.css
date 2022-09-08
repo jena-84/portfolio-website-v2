@@ -223,39 +223,72 @@ body{
     border-radius: 0.3rem;
     transition: width 0.5s 0.5s ease-in-out;
 }
-.services{
-    width: 100%;
-    height: 25vh;
+.services-first-row{
+    width: 90%;
+    height: 22vh;
     display: flex;
     
     justify-content: space-evenly;
     align-items: center;
     -webkit-animation: mover 1s infinite  alternate;
     animation: mover 1s infinite  alternate;
-
 }
   @-webkit-keyframes mover {
     0% {transform: translateY(0); }
     100% {transform:translateY(-10px)}
 }
- .service{
+ .service1-innter-container{
      text-align: center;
  }
-  .service:first-child,
-  .service:last-child{
+  .service1-innter-container:first-child,
+  .service1-innter-container:last-child{
       align-self: flex-start;
   }
- .service i{
-    font-size: 5rem;
+ .service1-innter-container i{
+    font-size: 4rem;
     color: #888;
     margin-bottom: 3rem;
     text-shadow: 0.1rem 0.1rem 0.5rem #555;
  }
- .service h2{
+ .service1-innter-container h2{
      font-size: 2rem;
      color: #fff;
      background-color: #777;
-     width: 20rem;
+     width: 18rem;
+     letter-spacing: 0.3rem;
+     transform: skew(-10deg);
+     box-shadow: 0.2rem 0.2rem 0.5rem #555;
+ }
+ .services-second-row{
+    width: 70%;
+    height: 22vh;
+    display: flex;
+    
+    justify-content: space-evenly;
+    align-items: center;
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+  @-webkit-keyframes mover {
+    0% {transform: translateY(0); }
+    100% {transform:translateY(-10px)}
+}
+ .service2-innter-container{
+     text-align: center;
+     
+ }
+  
+ .service2-innter-container i{
+    font-size: 5rem;
+    color: #888;
+    margin-bottom: .5rem;
+    text-shadow: 0.1rem 0.1rem 0.3rem #555;
+ }
+ .service2-innter-container h2{
+     font-size: 2rem;
+     color: #fff;
+     background-color: #777;
+     width: 18rem;
      letter-spacing: 0.3rem;
      transform: skew(-10deg);
      box-shadow: 0.2rem 0.2rem 0.5rem #555;
@@ -334,14 +367,16 @@ body{
   color: #333;
   letter-spacing: 0.1rem;
   border:0.3rem solid #cfbcba;
-  padding: 0 1rem;
+  border-radius: 3rem;
+  padding: 0 4rem;
   background-color: #fff;
   position: absolute;
   bottom: -5rem;
   transition: bottom 0.3rem;
+  
 }
 .project:hover .project-link{
-    bottom: 5rem;
+    bottom: 4rem;
     transition:bottom 0.3s 0.3s;
 }
 /*End of Section-3*/
@@ -484,13 +519,22 @@ body{
     margin-top:-5rem;
     padding: 1rem;
      }
-.services{
+.services-first-row{
   height: auto;
   flex-wrap: wrap;  
  }
-.service{
+.service1-innter-container{
   margin: 3rem 2rem;
  }
+
+ .service2-innter-container{
+    margin: 3rem 2rem;
+   }
+
+ .services-second-row{
+    height: auto;
+    flex-wrap: wrap;  
+   }
 .section-4{
   height: 105vh;
  }

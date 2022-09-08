@@ -39,7 +39,7 @@ const mainFn= ()=>{
 
 
 //****** Typing text on the heading section************/
-var textMessage = ["Hi, my name is Jenan", "I'm Front End Developer."];
+var textMessage = ["Hi, my name is Jenan", "I'm Software Developer."];
 var count = 0
 var letterCount = 0;
 
@@ -54,7 +54,7 @@ var letterCount = 0;
          letterCount = 0;
          count++;
      }
-     setTimeout(typewriter ,100)  
+     setTimeout(typewriter ,90)  
   }
 window.addEventListener("load",typewriter)
 
