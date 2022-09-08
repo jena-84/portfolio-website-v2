@@ -318,6 +318,8 @@ body{
     margin: 1rem;
     top: -4rem;
     background: #fff;
+    border: 0.4px solid rgb(151, 148, 148);
+    border-radius: 2%;
     box-shadow: 0.3rem 0.3rem 0.5rem #777;
     position: relative;
     /*To the content of the project*/
